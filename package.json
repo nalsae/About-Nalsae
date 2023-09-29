@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.86.0",
     "@react-three/fiber": "^8.14.3",
+    "gsap": "^3.12.2",
     "next": "latest",
     "postcss": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "tailwind-merge": "^1.14.0",
     "tailwindcss": "latest",
+    "three": "^0.156.1",
+    "three-stdlib": "^2.26.9",
     "typescript": "latest",
-    "three": "^0.156.1"
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
     "@types/node": "latest",
