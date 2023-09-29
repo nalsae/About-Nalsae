@@ -1,5 +1,23 @@
-import '@/styles/globals.css';
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+
+import '@/styles/globals.css';
+
+const galmuri = localFont({
+  src: [
+    {
+      path: 'fonts/Galmuri11.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: 'fonts/Galmuri11-Bold.woff2',
+      weight: '700',
+      style: 'bold',
+    },
+  ],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: "Hello, I'm Nalsae!",
@@ -12,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='ko'>
-      <body>{children}</body>
+    <html lang="ko">
+      <body className={galmuri.className}>{children}</body>
     </html>
   );
 }
