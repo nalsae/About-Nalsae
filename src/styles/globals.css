@@ -14,6 +14,36 @@
     box-shadow: 0px 0px 64px 8px rgba(255, 255, 255, 0.25);
   }
 
+  .scrollbar::-webkit-scrollbar {
+    width: 2.2vh;
+    background-color: #e2d3ff;
+  }
+  .scrollbar::-webkit-scrollbar-thumb {
+    border: 0.3vh solid #513e78;
+    background: #ffffff;
+  }
+
+  .scrollbar::-webkit-scrollbar-button {
+    height: 2.2vh;
+    border: 0.3vh solid #513e78;
+  }
+
+  .scrollbar::-webkit-scrollbar-button:start {
+    background: no-repeat center/65% #ffffff
+      url('/assets/icon/button_scroll_top.svg');
+  }
+
+  .scrollbar::-webkit-scrollbar-button:end {
+    background: no-repeat center/65% #ffffff
+      url('/assets/icon/button_scroll_bottom.svg');
+  }
+
+  .scrollbar::-webkit-resizer {
+    border: 0.3vh solid #513e78;
+    background: no-repeat center/65% #ffffff
+      url('/assets/icon/button_resize.svg');
+  }
+
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
