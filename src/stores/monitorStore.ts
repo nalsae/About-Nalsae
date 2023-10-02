@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export interface GlobalState {
+export interface MonitorState {
   isClick: boolean;
   isOn: boolean;
 
@@ -8,7 +8,7 @@ export interface GlobalState {
   toggle: () => void;
 }
 
-const useStore = create<GlobalState>((set) => ({
+const useMonitorStore = create<MonitorState>((set) => ({
   isClick: false,
   isOn: false,
 
@@ -16,4 +16,4 @@ const useStore = create<GlobalState>((set) => ({
   toggle: () => set((state) => ({ isOn: !state.isOn })),
 }));
 
-export default useStore;
+export default useMonitorStore;

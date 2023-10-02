@@ -6,7 +6,7 @@ import { useGLTF } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
 import gsap from 'gsap';
 
-import useStore from '@/stores/store';
+import useMonitorStore from '@/stores/monitorStore';
 
 type MonitorGLTF = GLTF & {
   nodes: {
@@ -23,8 +23,8 @@ type MonitorGLTF = GLTF & {
   };
 };
 
-export default function Computer() {
-  const { isClick, isOn, zoom, toggle } = useStore();
+export default function Monitor() {
+  const { isClick, isOn, zoom, toggle } = useMonitorStore();
 
   const { camera } = useThree();
   const {
