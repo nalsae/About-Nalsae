@@ -1,7 +1,15 @@
+'use client';
+
+import { v4 as uuid } from 'uuid';
+
+import useWindowStore from '@/stores/windowStore';
+
 import Link from 'next/link';
 import Clock from './Clock';
 
 export default function Taskbar() {
+  const { windows } = useWindowStore();
+
   return (
     <section className="fixed bottom-0 flex items-center w-full h-[8.82vh] border-t-[0.5vh] border-purple-30 bg-purple-10 text-xl font-bold shadow-taskbar z-50">
       <div className="w-[9.7vh] h-full px-[1.7vh] py-[1.4vh] border-r-[0.5vh] border-purple-30">
@@ -19,7 +27,7 @@ export default function Taskbar() {
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub 바로 가기"
-              className="block w-[5.5vh] h-[5vh] b bg-no-repeat bg-contain bg-center bg-[url('/assets/icon/link_github.png')] drop-shadow-icon-big"
+              className="block w-[5.5vh] h-[5vh] bg-no-repeat bg-contain bg-center bg-[url('/assets/icon/link_github.png')] drop-shadow-icon-big"
             />
           </li>
           <li>
@@ -28,9 +36,18 @@ export default function Taskbar() {
               target="_blank"
               rel="noopener noreferrer"
               title="Velog 바로 가기"
-              className="block w-[5.5vh] h-[5vh] b bg-no-repeat bg-contain bg-center bg-[url('/assets/icon/link_velog.png')] drop-shadow-icon-big"
+              className="block w-[5.5vh] h-[5vh] bg-no-repeat bg-contain bg-center bg-[url('/assets/icon/link_velog.png')] drop-shadow-icon-big"
             />
           </li>
+          {windows.map(({ url }) => (
+            <li key={uuid()}>
+              <button
+                type="button"
+                title="열기"
+                className={`w-[5.5vh] h-[5vh] bg-no-repeat bg-contain bg-center drop-shadow-icon-big ${url}`}
+              />
+            </li>
+          ))}
         </ul>
       </nav>
       <button
