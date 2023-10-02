@@ -4,13 +4,13 @@ import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
-import useStore from '@/stores/store';
+import useMonitorStore from '@/stores/monitorStore';
 
-import Computer from '@/components/Computer';
-import Window from '@/components/Window';
+import Monitor from '@/components/Monitor';
+import Screen from '@/components/Screen';
 
 export default function Home() {
-  const { isClick, isOn } = useStore();
+  const { isClick, isOn } = useMonitorStore();
 
   return (
     <main className="relative w-screen h-screen bg-animation">
@@ -37,7 +37,7 @@ export default function Home() {
           intensity={0.5}
           decay={2}
         />
-        <Computer />
+        <Monitor />
         <OrbitControls
           enableRotate={!isClick}
           enableZoom={false}
@@ -46,7 +46,7 @@ export default function Home() {
         />
         {/* <gridHelper /> */}
       </Canvas>
-      {isOn && <Window />}
+      {isOn && <Screen />}
     </main>
   );
 }
