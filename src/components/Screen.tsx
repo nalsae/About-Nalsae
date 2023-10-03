@@ -22,10 +22,10 @@ export default function Screen() {
             key={index}
             className="flex flex-col justify-center items-center gap-[0.6vh]">
             <button
+              onDoubleClick={handleDoubleClick}
               type="button"
               data-window-name={icon}
               data-url={ICONS_STYLE[icon]}
-              onDoubleClick={handleDoubleClick}
               className={`w-[7.1vh] h-[6.4vh] bg-no-repeat bg-contain bg-center drop-shadow-icon-big ${ICONS_STYLE[icon]}`}
             />
             <p className="text-purple-50 text-[1.5vh] font-bold text-center">
@@ -37,10 +37,12 @@ export default function Screen() {
         ),
       )}
       <Taskbar />
-      {windows.map(({ name }) => {
+      {windows.map(({ name, isMinimized }) => {
+        if (isMinimized) return;
+
         if (name === 'About Me') return <AboutMe key={uuid()} />;
         if (name === 'Projects') return <Projects key={uuid()} />;
-        if (name === 'TechStacks') return <TechStacks key={uuid()} />;
+        if (name === 'Tech Stacks') return <TechStacks key={uuid()} />;
       })}
     </div>
   );
@@ -51,6 +53,6 @@ const ICONS_STYLE = {
   Hobby: "bg-[url('/assets/icon/heart_purple.png')]",
   Playlist: "bg-[url('/assets/icon/heart_pink.png')]",
   Projects: "bg-[url('/assets/icon/folder_pink.png')]",
-  'Teck Stacks': "bg-[url('/assets/icon/folder_mint.png')]",
+  'Tech Stacks': "bg-[url('/assets/icon/folder_mint.png')]",
   Album: "bg-[url('/assets/icon/note_mint.png')]",
 } as { [key: string]: string };
