@@ -30,7 +30,7 @@ export default function Intro() {
             <h4 className="mb-[1vh] text-[1.8vh] text-purple-70 font-bold">
               접근성을 고민하고 준수합니다.
             </h4>
-            <p>
+            <p className="indent-[1vh]">
               {' '}
               프론트엔드 개발자로서 사용자의 관점을 고려하여 UI와 UX를 개선하고,
               웹 접근성을 준수하는 마크업을 작성합니다. 프로젝트 중 Web Vital
@@ -45,7 +45,7 @@ export default function Intro() {
             <h4 className="mb-[1vh] text-[1.8vh] text-purple-70 font-bold">
               아름다운 디자인과 코드를 추구합니다.
             </h4>
-            <p className="mb-[0.5vh]">
+            <p className="mb-[0.5vh] indent-[1vh]">
               첫째, 아름다운 디자인을 추구합니다. 디자인에 관심이 깊어 디자인
               툴을 능숙하게 다룰 수 있고 UI와 UX 관련 아티클을 학습합니다.
               프로젝트 진행 시 Atomic Design 방식의{' '}
@@ -54,7 +54,7 @@ export default function Intro() {
               </span>
               하여 DX를 향상시켰습니다.
             </p>
-            <p>
+            <p className="indent-[1vh]">
               둘째, 아름다운 코드를 추구합니다. 기능 구현을 완료하더라도
               유지보수의 용이성을 위해 리팩토링을 반복합니다. 구체적으로{' '}
               <span className="pl-[0.3vh] pr-[0.2vh] emphasis">
@@ -68,7 +68,7 @@ export default function Intro() {
             <h4 className="mb-[1vh] text-[1.8vh] text-purple-70 font-bold">
               기록과 회고를 작성합니다.
             </h4>
-            <p>
+            <p className="indent-[1vh]">
               경험한 내용을 문서로 정리하는 습관이 있기 때문에{' '}
               <span className="pl-[0.3vh] pr-[0.2vh] emphasis">
                 개발 과정 중 발생한 문제의 원인과 해결 과정, 결과
@@ -81,7 +81,7 @@ export default function Intro() {
             <h4 className="mb-[1vh] text-[1.8vh] text-purple-70 font-bold">
               커뮤니케이션을 즐깁니다.
             </h4>
-            <p>
+            <p className="indent-[1vh]">
               협업 시 동료들과 소통하고{' '}
               <span className="pl-[0.3vh] pr-[0.2vh] emphasis">
                 적극적으로 의견을 피력하며 기획 및 디자인 단계에도 참여

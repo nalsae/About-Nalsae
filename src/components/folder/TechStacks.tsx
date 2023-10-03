@@ -23,7 +23,7 @@ export default function TechStacks() {
               data-url={ICONS_STYLE[name]}
               className={`w-[4.5vh] h-[5.7vh] bg-no-repeat bg-contain bg-center drop-shadow-icon-small ${ICONS_STYLE[name]}`}
             />
-            <h3 className="w-[8vh] text-center">{name}</h3>
+            <h3 className="w-[8vh] text-center leading-[1.5vh]">{name}</h3>
           </div>
         ))}
       </div>
