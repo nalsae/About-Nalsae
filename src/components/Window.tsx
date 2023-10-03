@@ -1,14 +1,49 @@
+'use client';
+
+import { animated } from 'react-spring';
+
+import useWindowStore from '@/stores/windowStore';
+
+import useResizeWindow from '@/hooks/useResizeWindow';
+import useDragWindow from '@/hooks/useDragWindow';
+
 interface WindowProps {
   title: string;
   children?: React.ReactNode;
 }
 
 export default function Window({ title, children }: WindowProps) {
+  const { minimize, close } = useWindowStore();
+
+  const { divRef, sectionRef } = useResizeWindow();
+  const { position, setPosition } = useDragWindow();
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    if (!(event.target instanceof HTMLButtonElement)) return;
+
+    const title = event.target.closest('ul')?.dataset.title as string;
+
+    if (event.target.title === '최소화') minimize(title);
+
+    if (event.target.title === '최대화') {
+    }
+
+    if (event.target.title === '닫기') close(title);
+  };
+
   return (
-    <section className="absolute top-[3.4vh] left-[14.5vh] min-w-[27vh] max-h-[48vh] border-[0.5vh] border-purple-30 bg-white-10 shadow-window resize overflow-auto">
-      <div className="absolute top-0 left-0 flex justify-between items-center w-full pl-[0.8vh] pr-[0.4vh] border-b-[0.5vh] border-purple-30 bg-purple-10">
+    <animated.div
+      className="absolute top-[3.4vh] left-[14.5vh] min-w-[27vh] w-[46.45vh] touch-none"
+      style={{ x: position.x, y: position.y }}>
+      <animated.div
+        {...setPosition()}
+        ref={divRef}
+        className="sticky top-0 left-0 flex justify-between items-center w-full min-w-[27vh] pl-[0.8vh] pr-[0.4vh] border-[0.5vh] border-purple-30 bg-purple-10 shadow-window touch-none">
         <h2 className="text-purple-70 text-[1.3vh] font-bold">{title}</h2>
-        <ul className="flex items-center gap-[0.4vh] py-[0.3vh]">
+        <ul
+          onClick={handleClick}
+          data-title={title}
+          className="flex items-center gap-[0.4vh] py-[0.3vh]">
           {BUTTONS_INFO.map(({ title, iconUrl }, index) => (
             <li key={index} className="w-[2.1vh] h-[2.1vh]">
               <button
@@ -18,11 +53,13 @@ export default function Window({ title, children }: WindowProps) {
             </li>
           ))}
         </ul>
-      </div>
-      <div className="flex flex-wrap gap-[3.2vh] mt-[5.6vh] mx-[3.2vh]">
+      </animated.div>
+      <section
+        ref={sectionRef}
+        className="absolute top-[3.05vh] left-0 min-w-[27vh] w-[46.45vh] max-h-[48vh] h-[28vh] border-[0.5vh] border-purple-30 bg-white-10 shadow-window resize overflow-auto scrollbar">
         {children}
-      </div>
-    </section>
+      </section>
+    </animated.div>
   );
 }
 
