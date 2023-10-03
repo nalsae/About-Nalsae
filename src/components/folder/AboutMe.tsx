@@ -7,15 +7,15 @@ import Window from '@/components/Window';
 import { ABOUT_ME_CONTENTS } from '@/constants/contents';
 
 export default function AboutMe() {
-  const { handleDoubleClick } = useOpenWindow('page');
+  const { handleDoubleClick } = useOpenWindow('folder');
 
   return (
-    <Window title="About Me">
+    <Window title="About Me" type="folder">
       <div className="flex flex-wrap gap-[1.5vh] mt-[2.8vh] mx-[3.2vh]">
         {ABOUT_ME_CONTENTS.map((name, index) => (
           <div
             key={index}
-            className="flex flex-col items-center gap-[0.5vh] text-purple-50 text-[1.2vh] font-bold">
+            className="flex flex-col items-center gap-[1vh] text-purple-50 text-[1.2vh] font-bold">
             <button
               onDoubleClick={handleDoubleClick}
               type="button"

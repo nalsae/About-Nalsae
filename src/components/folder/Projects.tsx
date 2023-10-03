@@ -7,16 +7,16 @@ import Window from '@/components/Window';
 import { PROJECTS_CONTENTS } from '@/constants/contents';
 
 export default function Projects() {
-  const { handleDoubleClick } = useOpenWindow('page');
+  const { handleDoubleClick } = useOpenWindow('folder');
 
   return (
-    <Window title="Projects">
+    <Window title="Projects" type="folder">
       <div className="flex flex-wrap gap-[1.5vh] mt-[2.8vh] mx-[3.2vh]">
         {PROJECTS_CONTENTS.map((name, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center gap-[0.5vh] text-purple-50 text-[1.2vh] font-bold">
+              className="flex flex-col items-center gap-[1vh] text-purple-50 text-[1.2vh] font-bold">
               <button
                 onDoubleClick={handleDoubleClick}
                 type="button"

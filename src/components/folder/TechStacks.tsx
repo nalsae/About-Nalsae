@@ -7,15 +7,15 @@ import Window from '@/components/Window';
 import { TECH_STACKS_CONTENTS } from '@/constants/contents';
 
 export default function TechStacks() {
-  const { handleDoubleClick } = useOpenWindow('page');
+  const { handleDoubleClick } = useOpenWindow('folder');
 
   return (
-    <Window title="Tech Stacks">
+    <Window title="Tech Stacks" type="folder">
       <div className="flex flex-wrap gap-[1.5vh] mt-[2.8vh] mx-[3.2vh]">
         {TECH_STACKS_CONTENTS.map((name, index) => (
           <div
             key={index}
-            className="flex flex-col items-center gap-[0.5vh] text-purple-50 text-[1.2vh] font-bold">
+            className="flex flex-col items-center gap-[1vh] text-purple-50 text-[1.2vh] font-bold">
             <button
               onDoubleClick={handleDoubleClick}
               type="button"
