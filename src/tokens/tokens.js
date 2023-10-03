@@ -47,6 +47,7 @@ const tokens = {
   dropShadow: {
     'icon-big': '2px 4px 2px #4C2994',
     'icon-small': '3px 3px 2px #4C2994',
+    'swiper-button': '0px 0px 4px #e2d3ff',
   },
 };
 
