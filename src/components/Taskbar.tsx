@@ -6,9 +6,18 @@ import useWindowStore from '@/stores/windowStore';
 
 import Link from 'next/link';
 import Clock from './Clock';
+import React from 'react';
 
 export default function Taskbar() {
-  const { windows } = useWindowStore();
+  const { windows, restore } = useWindowStore();
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    if (event.target instanceof HTMLButtonElement) {
+      const windowName = event.target.dataset.windowName as string;
+
+      restore(windowName);
+    }
+  };
 
   return (
     <section className="fixed bottom-0 flex items-center w-full h-[8.82vh] border-t-[0.5vh] border-purple-30 bg-purple-10 text-xl font-bold shadow-taskbar z-50">
@@ -39,11 +48,13 @@ export default function Taskbar() {
               className="block w-[5.5vh] h-[5vh] bg-no-repeat bg-contain bg-center bg-[url('/assets/icon/link_velog.png')] drop-shadow-icon-big"
             />
           </li>
-          {windows.map(({ url }) => (
+          {windows.map(({ name, url }) => (
             <li key={uuid()}>
               <button
+                onClick={handleClick}
                 type="button"
                 title="열기"
+                data-window-name={name}
                 className={`w-[5.5vh] h-[5vh] bg-no-repeat bg-contain bg-center drop-shadow-icon-big ${url}`}
               />
             </li>
