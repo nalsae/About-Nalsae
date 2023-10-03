@@ -4,10 +4,18 @@ import { v4 as uuid } from 'uuid';
 
 import useOpenWindow from '@/hooks/useOpenWindow';
 
-import AboutMe from '@/components/folder/AboutMe';
-import Projects from '@/components/folder//Projects';
-import TechStacks from '@/components/folder//TechStacks';
 import Taskbar from './Taskbar';
+import AboutMe from '@/components/Folder/AboutMe';
+import Projects from '@/components/Folder/Projects';
+import TechStacks from '@/components/Folder/TechStacks';
+import Intro from '@/components/Page/AboutMe/Intro';
+import Contact from '@/components/Page/AboutMe/Contact';
+import Activity from '@/components/Page/AboutMe/Activity';
+import Education from '@/components/Page/AboutMe/Education';
+import Interest from '@/components/Page/AboutMe/Interest';
+import FrontEnd from '@/components/Page/TechStacks/FrontEnd';
+import BackEnd from '@/components/Page/TechStacks/BackEnd';
+import Design from '@/components/Page/TechStacks/Design';
 
 import { SCREENS_INFO } from '@/constants/contents';
 
@@ -20,7 +28,7 @@ export default function Screen() {
         icon ? (
           <div
             key={index}
-            className="flex flex-col justify-center items-center gap-[0.6vh]">
+            className="flex flex-col justify-center items-center gap-[1.2vh]">
             <button
               onDoubleClick={handleDoubleClick}
               type="button"
@@ -40,13 +48,25 @@ export default function Screen() {
       {windows.map(({ name, isMinimized }) => {
         if (isMinimized) return;
 
-        if (name === 'About Me') return <AboutMe key={uuid()} />;
-        if (name === 'Projects') return <Projects key={uuid()} />;
-        if (name === 'Tech Stacks') return <TechStacks key={uuid()} />;
+        return WINDOWS[name];
       })}
     </div>
   );
 }
+
+const WINDOWS = {
+  'About Me': <AboutMe key={uuid()} />,
+  Projects: <Projects key={uuid()} />,
+  'Tech Stacks': <TechStacks key={uuid()} />,
+  Intro: <Intro key={uuid()} />,
+  Contact: <Contact key={uuid()} />,
+  Activity: <Activity key={uuid()} />,
+  Education: <Education key={uuid()} />,
+  Interest: <Interest key={uuid()} />,
+  'Front-End': <FrontEnd key={uuid()} />,
+  'Back-End': <BackEnd key={uuid()} />,
+  Design: <Design key={uuid()} />,
+} as { [key: string]: React.ReactNode };
 
 const ICONS_STYLE = {
   'About Me': "bg-[url('/assets/icon/folder_lightpink.png')]",
