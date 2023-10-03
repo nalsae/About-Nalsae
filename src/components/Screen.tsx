@@ -16,6 +16,11 @@ import Interest from '@/components/Page/AboutMe/Interest';
 import FrontEnd from '@/components/Page/TechStacks/FrontEnd';
 import BackEnd from '@/components/Page/TechStacks/BackEnd';
 import Design from '@/components/Page/TechStacks/Design';
+import GrowStory from '@/components/Page/Projects/GrowStory';
+import MyPokedex from '@/components/Page/Projects/MyPokedex';
+import Vinyl from '@/components/Page/Projects/Vinyl';
+import PiecePlan from '@/components/Page/Projects/PiecePlan';
+import BaskinRobbins from '@/components/Page/Projects/BaskinRobbins';
 
 import { SCREENS_INFO } from '@/constants/contents';
 
@@ -58,11 +63,19 @@ const WINDOWS = {
   'About Me': <AboutMe key={uuid()} />,
   Projects: <Projects key={uuid()} />,
   'Tech Stacks': <TechStacks key={uuid()} />,
+
   Intro: <Intro key={uuid()} />,
   Contact: <Contact key={uuid()} />,
   Activity: <Activity key={uuid()} />,
   Education: <Education key={uuid()} />,
   Interest: <Interest key={uuid()} />,
+
+  'Grow Story': <GrowStory key={uuid()} />,
+  'My Pokedex': <MyPokedex key={uuid()} />,
+  '33 1/3': <Vinyl key={uuid()} />,
+  'Piece Plan': <PiecePlan key={uuid()} />,
+  'Improving BR Website': <BaskinRobbins key={uuid()} />,
+
   'Front-End': <FrontEnd key={uuid()} />,
   'Back-End': <BackEnd key={uuid()} />,
   Design: <Design key={uuid()} />,
