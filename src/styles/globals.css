@@ -49,6 +49,22 @@
     color: white;
   }
 
+  .list-style-dot::before {
+    display: inline-block;
+    content: '';
+    width: 0.25rem;
+    min-width: 0.25rem;
+    height: 0.25rem;
+    min-height: 0.25rem;
+    margin: 0 1vh;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #7271d6, #ae75eb);
+  }
+
+  .swiper-slide {
+    width: 95%;
+  }
+
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -63,5 +79,6 @@
 }
 
 body {
+  font-size: 1.7vh;
   line-height: 1;
 }
