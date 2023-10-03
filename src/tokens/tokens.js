@@ -41,7 +41,8 @@ const tokens = {
   boxShadow: {
     taskbar: '0px -4px 4px 0px rgba(81, 62, 120, 0.25);',
     window: '4px 4px 4px 0px #6A43B8',
-    page: '2px 2px 0px 0px #513E78',
+    'page-dark': '4px 4px 0px 0px #513E78',
+    'page-light': '4px 4px 0px 0px #866bba',
   },
   dropShadow: {
     'icon-big': '2px 4px 2px #4C2994',
