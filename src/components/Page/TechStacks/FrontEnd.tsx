@@ -23,7 +23,7 @@ export default function FrontEnd() {
                     alt=""
                     width={48}
                     height={48}
-                    style={{ width: 'auto', height: 'auto' }}
+                    style={{ height: 'auto' }}
                     className="min-w-[5vh] min-h-[5vh] object-none"
                   />
                   <h4 className="w-fit px-[0.6vh] py-[0.2vh] border-[0.4vh] border-purple-30 text-[1.3vh] text-purple-70 font-bold shadow-page-dark whitespace-nowrap">
