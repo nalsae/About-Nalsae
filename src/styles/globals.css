@@ -44,6 +44,11 @@
       url('/assets/icon/button_resize.svg');
   }
 
+  .emphasis {
+    background: linear-gradient(90deg, #6160bb, #9460cc);
+    color: white;
+  }
+
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -55,4 +60,8 @@
       background-position: 0% 50%;
     }
   }
+}
+
+body {
+  line-height: 1;
 }
