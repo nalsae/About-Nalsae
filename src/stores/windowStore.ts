@@ -14,10 +14,10 @@ export interface WindowState {
   windows: Window[];
 
   open: (window: Window) => void;
-  minimize: (window: Window) => void;
+  minimize: (name: string) => void;
   maximize: (window: Window) => void;
-  restore: (window: Window) => void;
-  close: (window: Window) => void;
+  restore: (name: string) => void;
+  close: (name: string) => void;
 }
 
 const useWindowStore = create<WindowState>((set) => ({
@@ -25,9 +25,9 @@ const useWindowStore = create<WindowState>((set) => ({
 
   open: (window) =>
     set((state) => ({ windows: uniqBy([...state.windows, window], 'name') })),
-  minimize: (window) =>
+  minimize: (name) =>
     set((state) => ({
-      windows: state.windows.map(({ name }) =>
+      windows: state.windows.map((window) =>
         name === window.name ? { ...window, isMinimized: true } : window,
       ),
     })),
@@ -37,17 +37,17 @@ const useWindowStore = create<WindowState>((set) => ({
         name === window.name ? { ...window, isMaximized: true } : window,
       ),
     })),
-  restore: (window) =>
+  restore: (name) =>
     set((state) => ({
-      windows: state.windows.map(({ name }) =>
+      windows: state.windows.map((window) =>
         name === window.name
           ? { ...window, isMinimized: false, isMaximized: false }
           : window,
       ),
     })),
-  close: (window) =>
+  close: (name) =>
     set((state) => ({
-      windows: state.windows.filter(({ name }) => name !== window.name),
+      windows: state.windows.filter((window) => name !== window.name),
     })),
 }));
 
