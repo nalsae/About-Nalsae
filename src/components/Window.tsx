@@ -1,6 +1,7 @@
 'use client';
 
 import { animated } from 'react-spring';
+import { twMerge } from 'tailwind-merge';
 
 import useWindowStore from '@/stores/windowStore';
 
@@ -8,11 +9,18 @@ import useResizeWindow from '@/hooks/useResizeWindow';
 import useDragWindow from '@/hooks/useDragWindow';
 
 interface WindowProps {
+  type: 'folder' | 'page';
   title: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
-export default function Window({ title, children }: WindowProps) {
+export default function Window({
+  type,
+  title,
+  children,
+  className,
+}: WindowProps) {
   const { minimize, close } = useWindowStore();
 
   const { divRef, sectionRef } = useResizeWindow();
@@ -31,9 +39,17 @@ export default function Window({ title, children }: WindowProps) {
     if (event.target.title === '닫기') close(title);
   };
 
+  const windowStyle =
+    type === 'folder'
+      ? 'top-[3.4vh] left-[14.5vh]'
+      : 'top-[12.7vh] right-[14.5vh]';
+
   return (
     <animated.div
-      className="absolute top-[3.4vh] left-[14.5vh] min-w-[27vh] w-[46.45vh] touch-none"
+      className={twMerge(
+        `absolute min-w-[27vh] w-[46.45vh] touch-none ${windowStyle}`,
+        className,
+      )}
       style={{ x: position.x, y: position.y }}>
       <animated.div
         {...setPosition()}
@@ -56,7 +72,10 @@ export default function Window({ title, children }: WindowProps) {
       </animated.div>
       <section
         ref={sectionRef}
-        className="absolute top-[3.05vh] left-0 min-w-[27vh] w-[46.45vh] max-h-[48vh] h-[28vh] border-[0.5vh] border-purple-30 bg-white-10 shadow-window resize overflow-auto scrollbar">
+        className={twMerge(
+          'absolute top-[3.05vh] left-0 min-w-[27vh] w-[46.45vh] max-h-[48vh] h-[28vh] border-[0.5vh] border-purple-30 bg-white-10 shadow-window resize overflow-auto scrollbar',
+          className,
+        )}>
         {children}
       </section>
     </animated.div>
