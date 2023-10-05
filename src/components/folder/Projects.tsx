@@ -1,5 +1,7 @@
 'use client';
 
+import { motion } from 'framer-motion';
+
 import useOpenWindow from '@/hooks/useOpenWindow';
 
 import Window from '@/components/Window';
@@ -7,25 +9,26 @@ import Window from '@/components/Window';
 import { PROJECTS_CONTENTS } from '@/constants/contents';
 
 export default function Projects() {
-  const { handleDoubleClick } = useOpenWindow('folder');
+  const { handleDoubleClick } = useOpenWindow();
 
   return (
     <Window title="Projects" type="folder">
-      <div className="flex flex-wrap gap-[1.5vh] mt-[2.8vh] mx-[3.2vh]">
+      <div className="flex flex-wrap gap-[1.5vh] my-[2.8vh] mx-[3.2vh]">
         {PROJECTS_CONTENTS.map((name, index) => {
           return (
-            <div
+            <motion.div
               key={index}
+              whileHover={{ scale: 1.1 }}
               className="flex flex-col items-center gap-[1vh] text-purple-50 text-[1.2vh] font-bold">
               <button
                 onDoubleClick={handleDoubleClick}
                 type="button"
-                data-window-name={name}
+                data-window-title={name}
                 data-url={ICONS_STYLE[name]}
                 className={`w-[4.5vh] h-[5.7vh] bg-no-repeat bg-contain bg-center drop-shadow-icon-small ${ICONS_STYLE[name]}`}
               />
               <h3 className="w-[8vh] text-center leading-[1.5vh]">{name}</h3>
-            </div>
+            </motion.div>
           );
         })}
       </div>
