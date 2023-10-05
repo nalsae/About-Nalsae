@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { motion } from 'framer-motion';
 
 import useSwiperNavigation from '@/hooks/useSwiperNavigation';
 
@@ -169,14 +170,18 @@ export default function PiecePlan() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div
+            <motion.div
               onClick={handlePrev}
               role="button"
+              title="이전으로"
+              whileHover={{ scale: 1.3 }}
               className="absolute top-1/2 left-[1vh] w-[2vh] h-[2vh] bg-no-repeat bg-contain bg-center bg-[url('/assets/icon/button_prev.png')] drop-shadow-swiper-button cursor-pointer z-40"
             />
-            <div
+            <motion.div
               onClick={handleNext}
               role="button"
+              title="다음으로"
+              whileHover={{ scale: 1.3 }}
               className="absolute top-1/2 right-[1vh] w-[2vh] h-[2vh] bg-no-repeat bg-contain bg-center bg-[url('/assets/icon/button_next.png')] drop-shadow-swiper-button cursor-pointer z-40"
             />
           </div>
