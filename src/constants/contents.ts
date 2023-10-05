@@ -62,6 +62,19 @@ export const PROJECTS_CONTENTS = [
 
 export const TECH_STACKS_CONTENTS = ['Front-End', 'Back-End', 'Design'];
 
+export const ALBUM_CONTENTS = [
+  'Austria_1',
+  'Austria_2',
+  'Croatia_1',
+  'Croatia_2',
+  'France_1',
+  'France_2',
+  'Portugal_1',
+  'Portugal_2',
+  'Switzerland_1',
+  'Switzerland_2',
+];
+
 export const FRONT_END_STACKS_INFO = [
   [
     { name: 'HTML5', imgUrl: '/assets/img/logo_html.png' },
