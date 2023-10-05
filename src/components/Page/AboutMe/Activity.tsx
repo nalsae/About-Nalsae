@@ -13,7 +13,7 @@ export default function Activity() {
               📝 Next.js 문서 번역
             </h4>
             <p className="mb-[0.4vh] text-purple-50 font-bold">2023.07</p>
-            <p>
+            <p className="indent-[1vh]">
               <span className="pl-[0.3vh] emphasis">
                 Next.js 공식 문서 한글화 작업
               </span>
@@ -26,7 +26,7 @@ export default function Activity() {
               👨‍💻 FE Conf 2022
             </h4>
             <p className="mb-[0.4vh] text-purple-50 font-bold">2022.10</p>
-            <p>
+            <p className="indent-[1vh]">
               <span className="pl-[0.3vh] emphasis">FE Conf 2022를 참관</span>
               하며 새로운 기술 트렌드를 파악하고 연사 분들께서 전달해주시는
               유익한 개발 경험을 습득할 수 있었습니다.

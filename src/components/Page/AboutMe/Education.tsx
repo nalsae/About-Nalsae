@@ -15,7 +15,7 @@ export default function Education() {
             <p className="mb-[0.4vh] text-purple-50 font-bold">
               2023.04 ~ 2023.10
             </p>
-            <p>
+            <p className="indent-[1vh]">
               코드스테이츠 주관 프론트엔드 개발자 부트캠프를 수료했습니다.
               부트캠프 내에서{' '}
               <span className="pl-[0.3vh] emphasis">
@@ -33,7 +33,7 @@ export default function Education() {
             <p className="mb-[0.4vh] text-purple-50 font-bold">
               2022.07 ~ 2022.12
             </p>
-            <p>
+            <p className="indent-[1vh]">
               제로베이스 주관 커넥to 프론트엔드 부트캠프를 수료했습니다.{' '}
               <span className="pl-[0.3vh] emphasis">
                 프론트엔드 관련 기술 스택을 학습
@@ -48,7 +48,7 @@ export default function Education() {
             <p className="mb-[0.4vh] text-purple-50 font-bold">
               2015.03 ~ 2022.02
             </p>
-            <p>
+            <p className="indent-[1vh]">
               총점 4.5 기준 4.15의 취득 학점으로{' '}
               <span className="pl-[0.3vh] emphasis">
                 국어국문학과와 휴먼 ICT 연계전공
