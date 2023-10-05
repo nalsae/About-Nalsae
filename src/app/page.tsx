@@ -8,6 +8,7 @@ import useMonitorStore from '@/stores/monitorStore';
 
 import Monitor from '@/components/Monitor';
 import Screen from '@/components/Screen';
+import GuideMessage from '@/components/GuideMessage';
 
 export default function Home() {
   const { isClick, isOn } = useMonitorStore();
@@ -39,13 +40,15 @@ export default function Home() {
         />
         <Monitor />
         <OrbitControls
+          autoRotate
+          autoRotateSpeed={5}
           enableRotate={!isClick}
           enableZoom={false}
           minPolarAngle={1.15}
           maxPolarAngle={1.75}
         />
-        {/* <gridHelper /> */}
       </Canvas>
+      {!isOn && !isClick && <GuideMessage />}
       {isOn && <Screen />}
     </main>
   );
