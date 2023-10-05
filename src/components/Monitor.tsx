@@ -37,7 +37,7 @@ export default function Monitor() {
       gsap.to(camera.position, {
         x: () => 0,
         y: () => 0,
-        z: () => 1.85,
+        z: () => 1.78,
         duration: 0.5,
       });
     }
