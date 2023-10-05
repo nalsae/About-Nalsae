@@ -65,6 +65,22 @@
     width: 95%;
   }
 
+  .text-gradient {
+    background: linear-gradient(
+      to right,
+      #d2bdff 25%,
+      #b5e9ff 50%,
+      #fff7ad 75%,
+      #ffc6ce 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 2.5s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 4px #2e123aad);
+  }
+
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -76,9 +92,26 @@
       background-position: 0% 50%;
     }
   }
+
+  @keyframes textShine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
 }
+
+/* * {
+  -webkit-user-drag: none;
+} */
 
 body {
   font-size: 1.7vh;
   line-height: 1;
+}
+
+img {
+  -webkit-user-drag: none;
 }
