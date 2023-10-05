@@ -43,6 +43,7 @@ const tokens = {
     window: '4px 4px 4px 0px #6A43B8',
     'page-dark': '4px 4px 0px 0px #513E78',
     'page-light': '4px 4px 0px 0px #866bba',
+    'input-light': '4px 4px 0px 0px #e2d3ff',
   },
   dropShadow: {
     'icon-big': '2px 4px 2px #4C2994',
