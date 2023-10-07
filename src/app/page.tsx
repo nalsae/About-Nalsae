@@ -40,7 +40,7 @@ export default function Home() {
         />
         <Monitor />
         <OrbitControls
-          autoRotate
+          autoRotate={!isClick}
           autoRotateSpeed={5}
           enableRotate={!isClick}
           enableZoom={false}
