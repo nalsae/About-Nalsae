@@ -133,18 +133,6 @@ export default function Vinyl() {
         </div>
         <div>
           <h4 className="w-fit px-[1vh] py-[0.7vh] mb-[1.5vh] border-[0.4vh] border-purple-30 text-[1.8vh] text-purple-70 font-bold shadow-page-dark whitespace-nowrap">
-            📒 진행 과정
-          </h4>
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://my-pokedex.notion.site/Pokedex-0757927d7a40462abdd096025e2f8927?pvs=4"
-            className="text-[1.5vh] text-purple-50 font-bold">
-            👉 Notion 바로 가기
-          </Link>
-        </div>
-        <div>
-          <h4 className="w-fit px-[1vh] py-[0.7vh] mb-[1.5vh] border-[0.4vh] border-purple-30 text-[1.8vh] text-purple-70 font-bold shadow-page-dark whitespace-nowrap">
             📷 구현 이미지
           </h4>
           <p className="mb-[1vh] text-gray-70 text-[1.3vh]">
