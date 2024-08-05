@@ -9,7 +9,7 @@ export default function Intro() {
         <h3 className="text-purple-70 font-bold">
           <span className="block mb-[1vh] text-[3vh]">안녕하세요!</span>
           <span className="text-purple-50 text-[2.3vh] leading-[3.2vh]">
-            <span>UX와 성능,</span> 두 마리 토끼를 잡는 프론트엔드 개발자
+            <span>UX와 도메인</span>을 이해하는 프론트엔드 개발자
             <span className="text-purple-70"> 김민석</span>입니다.
           </span>
         </h3>
@@ -43,20 +43,34 @@ export default function Intro() {
           </div>
           <div>
             <h4 className="mb-[1vh] text-[1.8vh] text-purple-70 font-bold">
-              아름다운 디자인과 코드를 추구합니다.
+              비즈니스 도메인을 이해하고 개선합니다.
+            </h4>
+            <p className="indent-[1vh]">
+              {' '}
+              새로운 프로젝트와 업무 투입 시 도메인 지식을 신속하게 습득하고
+              이를 바탕으로 효과적인 솔루션을 제시합니다. 기존 프로세스를 개선한
+              프로토타입을 신속하게 제작하여 실무에 도입한 결과,{' '}
+              <span className="pl-[0.3vh] emphasis">
+                소요 시간을 70% 단축하고 외주 비용을 100% 절감
+              </span>
+              한 경험이 있습니다.
+            </p>
+          </div>
+          <div>
+            <h4 className="mb-[1vh] text-[1.8vh] text-purple-70 font-bold">
+              디자인과 개발, 두 마리 토끼를 잡습니다.
             </h4>
             <p className="mb-[0.5vh] indent-[1vh]">
-              첫째, 아름다운 디자인을 추구합니다. 디자인에 관심이 깊어 디자인
-              툴을 능숙하게 다룰 수 있고 UI와 UX 관련 아티클을 학습합니다.
-              프로젝트 진행 시 Atomic Design 방식의{' '}
+              디자인에 관심이 깊어 디자인 툴을 능숙하게 다룰 수 있고 UI와 UX
+              관련 아티클을 학습합니다. 프로젝트 진행 시 Atomic Design 방식의{' '}
               <span className="pl-[0.3vh] pr-[0.2vh] emphasis">
                 디자인 시안 제작과 디자인 시스템 구축을 담당
               </span>
               하여 DX를 향상시켰습니다.
             </p>
             <p className="indent-[1vh]">
-              둘째, 아름다운 코드를 추구합니다. 기능 구현을 완료하더라도
-              유지보수의 용이성을 위해 리팩토링을 반복합니다. 구체적으로{' '}
+              기능 구현을 완료하더라도 유지보수의 용이성을 위해 리팩토링을
+              반복합니다. 구체적으로{' '}
               <span className="pl-[0.3vh] pr-[0.2vh] emphasis">
                 가독성, 변수와 함수의 네이밍, 성능 최적화
               </span>{' '}
@@ -73,8 +87,8 @@ export default function Intro() {
               <span className="pl-[0.3vh] pr-[0.2vh] emphasis">
                 개발 과정 중 발생한 문제의 원인과 해결 과정, 결과
               </span>
-              를 문서화 하는 편입니다. 새로운 기술 스택을 학습할 때면 지식을
-              빠르게 체득하기 위해 Notion이나 Velog 등에 기록하며 학습합니다.
+              를 문서화 하는 편입니다. 새로운 기술 스택을 학습할 때면 신속하게
+              체득하고 기억하기 위해 Notion이나 Velog 등에 기록하며 학습합니다.
             </p>
           </div>
           <div>
