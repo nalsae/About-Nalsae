@@ -9,6 +9,7 @@ export const ICONS_URL = {
   Contact: "bg-[url('/assets/icon/note_white.png')]",
   Activity: "bg-[url('/assets/icon/note_mint.png')]",
   Education: "bg-[url('/assets/icon/note_white.png')]",
+  Experience: "bg-[url('/assets/icon/heart_pink.png')]",
   Interest: "bg-[url('/assets/icon/heart_purple.png')]",
   'Grow Story': "bg-[url('/assets/icon/paper_growstory.png')]",
   'My Pokedex': "bg-[url('/assets/icon/paper_pokedex.png')]",
@@ -49,6 +50,7 @@ export const ABOUT_ME_CONTENTS = [
   'Contact',
   'Activity',
   'Education',
+  'Experience',
   'Interest',
 ];
 
