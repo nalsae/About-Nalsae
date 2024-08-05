@@ -11,6 +11,7 @@ import Intro from '@/components/Page/AboutMe/Intro';
 import Contact from '@/components/Page/AboutMe/Contact';
 import Activity from '@/components/Page/AboutMe/Activity';
 import Education from '@/components/Page/AboutMe/Education';
+import Experience from './Page/AboutMe/Experience';
 import Interest from '@/components/Page/AboutMe/Interest';
 import FrontEnd from '@/components/Page/TechStacks/FrontEnd';
 import BackEnd from '@/components/Page/TechStacks/BackEnd';
@@ -49,6 +50,7 @@ export default function Windows() {
       {window['Contact'].isOpen && <Contact />}
       {window['Activity'].isOpen && <Activity />}
       {window['Education'].isOpen && <Education />}
+      {window['Experience'].isOpen && <Experience />}
       {window['Interest'].isOpen && <Interest />}
 
       {window['Grow Story'].isOpen && <GrowStory />}
