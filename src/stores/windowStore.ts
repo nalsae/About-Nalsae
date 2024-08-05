@@ -23,6 +23,7 @@ export type Titles =
   | 'Contact'
   | 'Activity'
   | 'Education'
+  | 'Experience'
   | 'Interest'
   | 'Grow Story'
   | 'My Pokedex'
@@ -58,6 +59,7 @@ export interface WindowState {
   Contact: Window;
   Activity: Window;
   Education: Window;
+  Experience: Window;
   Interest: Window;
 
   'Grow Story': Window;
@@ -179,6 +181,14 @@ const useWindowStore = create<WindowState>((set) => ({
     type: 'page',
     title: 'Education',
     url: "bg-[url('/assets/icon/note_white.png')]",
+    isOpen: false,
+    isMinimized: false,
+    isMaximized: false,
+  },
+  Experience: {
+    type: 'page',
+    title: 'Experience',
+    url: "bg-[url('/assets/icon/heart_pink.png')]",
     isOpen: false,
     isMinimized: false,
     isMaximized: false,
