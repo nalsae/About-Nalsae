@@ -39,5 +39,6 @@ const ICONS_STYLE = {
   Contact: "bg-[url('/assets/icon/note_white.png')]",
   Activity: "bg-[url('/assets/icon/note_mint.png')]",
   Education: "bg-[url('/assets/icon/note_white.png')]",
+  Experience: "bg-[url('/assets/icon/heart_pink.png')]",
   Interest: "bg-[url('/assets/icon/heart_purple.png')]",
 } as { [key: string]: string };
