@@ -119,6 +119,47 @@ export default function GrowStory() {
               </li>
             ))}
           </ul>
+          <div className="px-[1.6vh] py-[1.4vh] mt-[0.8vh] rounded-[1vh] emphasis">
+            <h5 className="pb-[0.8vh] mb-[0.8vh] border-b-[1px] border-dashed font-semibold">
+              관련 블로그 게시글
+            </h5>
+            <ul className="flex flex-col gap-[0.5vh] text-[1.5vh] leading-[2.2vh]">
+              <li>
+                <Link
+                  href="https://velog.io/@nalsae/1-%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-Garden-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%EB%A1%9D-%EC%84%A4%EA%B3%84%EC%99%80-%EC%B4%88%EA%B8%B0-%EB%A7%B5-%EB%A0%8C%EB%8D%94%EB%A7%81"
+                  target="_blank"
+                  rel="noopenner noreferrer">
+                  👉 #1 우당탕탕 Garden 페이지 개발 기록 - 설계와 초기 정원 맵
+                  렌더링
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://velog.io/@nalsae/2-%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-Garden-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%EB%A1%9D-%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8-%EC%84%A4%EC%B9%98"
+                  target="_blank"
+                  rel="noopenner noreferrer">
+                  👉 #2 우당탕탕 Garden 페이지 개발 기록 - 정원 오브젝트 설치와
+                  이벤트 처리
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://velog.io/@nalsae/%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%B6%94%EC%A0%81-%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80-%EC%9E%84%EC%8B%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0"
+                  target="_blank"
+                  rel="noopenner noreferrer">
+                  👉 #3 우당탕탕 Garden 페이지 개발 기록 - 마우스 추적 오브젝트
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://velog.io/@nalsae/Next.js-S3-%EB%B2%84%ED%82%B7-%EC%A0%95%EC%A0%81-%EB%B0%B0%ED%8F%AC-%EA%B4%80%EB%A0%A8-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0%EA%B8%B0-feat.-SSG"
+                  target="_blank"
+                  rel="noopenner noreferrer">
+                  👉 Next.js + S3 버킷 정적 배포 관련 이슈 해결기 (feat. SSG)
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div>
           <h4 className="w-fit px-[1vh] py-[0.7vh] mb-[1.5vh] border-[0.4vh] border-purple-30 text-[1.8vh] text-purple-70 font-bold shadow-page-dark whitespace-nowrap">
